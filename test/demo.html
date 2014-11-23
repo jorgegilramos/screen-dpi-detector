@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <title>Demo screen.dpi.detector.js</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  
+  <link href="../css/demo.css" rel="stylesheet" media="screen" type="text/css" />
+  <script src="../js/screen.dpi.detector.js" type="text/javascript"></script>
+</head>
+<body>
+  <div class="wrap">
+    <div class="content-body">
+      <h2>Demo screen.dpi.detector.js</h2>
+      <p style="margin-top:0px">
+        Demo using javascript to detect resolution pixel density (dpi) in screen.
+      </p>
+      <p>
+        Github repository:<br/>
+        <a href="https://github.com/jorgegilramos/screen-dpi-detector">https://github.com/jorgegilramos/screen-dpi-detector</a>
+      </p>
+      <p>
+        Ricardo Jorge Gil Ramos<br/>
+        <a href="http://jorgegilramos.es">http://jorgegilramos.es</a>
+      </p>
+      <p class="info"><b>prefix</b><br/>&nbsp;<span id="prefix" class="r info"></span></p>
+      <p class="info"><b>device-pixel-ratio</b><br/><span class="details">detected</span><span id="dpr-detected" class="r info"></span></p>
+      <p class="info"><b>device-pixel-ratio</b><br/><span class="details">window</span><span id="dpr-window" class="r info"></span></p>
+      <p class="info"><b>min-resolution</b><br/><span class="details">dppx</span><span id="dppx" class="r info"></span></p>
+      <p class="info"><b>min-resolution</b><br/><span class="details">dpi</span><span id="dpi" class="r info"></span></p>
+      <br />
+      <p class="info"><b>ldpi</b><br/><span class="details">(low) ~120dpi</span><span id="ldpi" class="r"></span></p>
+      <p class="info"><b>mdpi</b><br/><span class="details">(medium) ~160dpi</span><span id="mdpi" class="r"></span></p>
+      <p class="info"><b>hdpi</b><br/><span class="details">(high) ~240dpi</span><span id="hdpi" class="r"></span></p>
+      <p class="info"><b>xhdpi</b><br/><span class="details">(extra-high) ~320dpi</span><span id="xhdpi" class="r"></span></p>
+      <p class="info"><b>xxhdpi</b><br/><span class="details">(extra-extra-high) ~480dpi</span><span id="xxhdpi" class="r"></span></p>
+      <p class="info"><b>xxxhdpi</b><br/><span class="details">(extra-extra-extra-high) ~640dpi</span><span id="xxxhdpi" class="r"></span></p>
+      <script type="text/javascript">
+        /*
+        Screen resolution:
+        - ldpi (low) ~120dpi
+        - mdpi (medium) ~160dpi
+        - hdpi (high) ~240dpi
+        - xhdpi (extra-high) ~320dpi
+        - xxhdpi (extra-extra-high) ~480dpi
+        - xxxhdpi (extra-extra-extra-high) ~640dpi
+        */
+        if (Detector) {
+          document.getElementById("prefix").innerHTML = Detector.prefix;
+          document.getElementById("dpr-detected").innerHTML = Detector.devicePixelRatio.toFixed(1);
+          document.getElementById("dpr-window").innerHTML = window.devicePixelRatio.toFixed(1);
+          document.getElementById("dppx").innerHTML = Detector.dppx.toFixed(1) + "dppx";
+          document.getElementById("dpi").innerHTML = Detector.dpi + "dpi";
+          // Screen resolution results
+          document.getElementById("ldpi").innerHTML = Detector.screens["ldpi"];
+          document.getElementById("mdpi").innerHTML = Detector.screens["mdpi"];
+          document.getElementById("hdpi").innerHTML = Detector.screens["hdpi"];
+          document.getElementById("xhdpi").innerHTML = Detector.screens["xhdpi"];
+          document.getElementById("xxhdpi").innerHTML = Detector.screens["xxhdpi"];
+          document.getElementById("xxxhdpi").innerHTML = Detector.screens["xxxhdpi"];
+          // Classnames "true" or "false"
+          document.getElementById("ldpi").className = "r " + Detector.screens["ldpi"];
+          document.getElementById("mdpi").className = "r " + Detector.screens["mdpi"];
+          document.getElementById("hdpi").className = "r " + Detector.screens["hdpi"];
+          document.getElementById("xhdpi").className = "r " + Detector.screens["xhdpi"];
+          document.getElementById("xxhdpi").className = "r " + Detector.screens["xxhdpi"];
+          document.getElementById("xxxhdpi").className = "r " + Detector.screens["xxxhdpi"];
+        }
+      </script>
+    </div>
+  </div>
+</body>
+</html>

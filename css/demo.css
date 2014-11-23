@@ -1,0 +1,93 @@
+html, body {
+  color: #444;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 18px;
+  margin: 0;
+}
+.wrap {
+  padding: 0 15px;
+  margin: 0 auto;
+  max-width: 600px;  
+}
+.content-body {
+  font-size: 18px;
+  padding-bottom: 30px;
+  width: 600px;
+}
+p {
+  margin:30px 0;
+}
+p.info {
+  border-radius:8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  font-size: 24px;
+  margin: 8px 0;
+  padding: 12px;
+  min-width: 310px;
+  max-width: 570px;
+}
+.info .details {
+  font-size: 14px;
+  font-style: italic;
+  padding-left:2px;
+  white-space: nowrap;
+}
+.info br {
+  display:none;
+}
+.r {
+  background:#f0f0f0;
+  border-bottom-right-radius:8px;
+  border-top-right-radius:8px;
+  float:right;
+  margin:-12px;
+  padding:12px 6px;
+  text-align:center;
+  width:150px;
+}
+.r.info {
+  background: #2980b9;
+  color: #ffffff;
+}
+.r.true {
+  background:#a2ce7e;
+  font-weight:bold;
+}
+/* Media 900px */
+@media (max-width: 900px) {
+  .wrap {
+    max-width: auto;
+  }
+  .content-body {
+    width: auto;
+  }
+}
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .content-body {
+    width: 500px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  html, body {
+    font-size: 15px;
+  }
+}
+/* Phone */
+@media only screen and (max-width: 480px) {
+  .wrap {
+    padding: 0 10px;
+  }
+  p.info {
+    margin: 12px 0;
+  }
+  .info .r {
+    margin-top:-41px;
+    padding: 26.5px 0;
+    white-space:nowrap;
+    width:126px;
+  }
+  .info br {
+    display:block;
+  }
+}

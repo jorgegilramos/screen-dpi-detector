@@ -16,7 +16,7 @@
  * Live demo:
  * http://jorgegilramos.es/test/demo.html
  *
- * Author:
+ * Author: Ricardo Jorge Gil Ramos
  * http://jorgegilramos.es
  *
  * RJGR © Creative Commons Attribution-NonCommercial 3.0 
