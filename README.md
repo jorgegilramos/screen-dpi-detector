@@ -1,4 +1,4 @@
-screen-hdpi-detector
+screen-dpi-detector
 ====================
 
 Screen resolution pixel density (dppx, dpi) detector in javascript based in feature detection.
