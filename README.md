@@ -14,7 +14,7 @@ Detect:
  * xxxhdpi (extra-extra-extra-high) ~640dpi
 
 ## Live Demo
-[Demo hdpi.detector.js](http://jorgegilramos.github.io/me/test/demo.html)
+[Demo screen.dpi.detector.js](http://jorgegilramos.github.io/me/test/demo.html)
 
 ## Usage
 
